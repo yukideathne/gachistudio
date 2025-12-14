@@ -175,6 +175,67 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16 / 9; /* Adjust based on screenshot aspect ratio */
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide.active {
+    display: block;
+    animation: fade 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keep aspect ratio, show full image */
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+    text-decoration: none; /* Reset link style */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white; /* Ensure text color stays white */
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
 /* Contact Form/Info */
 .contact-info {
     background: var(--white);
