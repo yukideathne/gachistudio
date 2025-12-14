@@ -159,6 +159,16 @@ h2 {
     color: var(--secondary-color);
 }
 
+.game-icon {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    display: block;
+}
+
 .game-desc {
     font-size: 0.95rem;
     color: #555;
